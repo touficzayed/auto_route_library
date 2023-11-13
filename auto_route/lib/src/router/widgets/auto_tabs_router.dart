@@ -324,6 +324,7 @@ class _AutoTabsRouterIndexedStackState extends AutoTabsRouterState
     final builderChild = stack.isEmpty
         ? Container(color: Theme.of(context).scaffoldBackgroundColor)
         : _IndexedStackBuilder(
+            key: ValueKey(_tabsHash),
             activeIndex: _index,
             tabsHash: _tabsHash,
             lazyLoad: typedWidget.lazyLoad,
